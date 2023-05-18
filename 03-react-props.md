@@ -29,7 +29,9 @@ const App = () => {
 
 - What is `const { name } = props;` doing?
 - Could you access props a different way?
+- * param destructuring
 - Why do we put the variable `name` in brackets inside of our `<h1>`?
+- * `name` is dynamic so needs to be called with {}
 
 ```jsx
 const User = (props) => {
@@ -46,6 +48,7 @@ const User = (props) => {
 ## Using the spread operator to pass props
 
 - What is `{...userDetails}` doing?
+- * spread operator - passes along top level all key/value pairs from `userDetails` as props
 - What would this look like written out?
 
 ```jsx
@@ -62,9 +65,13 @@ const App = () => {
 ## Rendering a list of items (ProductItem) using props
 
 - What data type is `products`?
+- * array of objs
 - What does the `map` method do?
+- * maps out each item 
 - How does the `map` method differ in React?
+- * return component
 - What is `{listItems}` going to display?
+- * array of components
 
 ```jsx
 const ProductPage = () => {
