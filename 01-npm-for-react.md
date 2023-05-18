@@ -32,7 +32,9 @@ export default message;
 ## Importing a Module
 
 - The import name `importedMessage` doesn't match the export name `message` from above. Is that ok?
+- * `importedMessage` becomes variable name for message in file that it is imported
 - Does this renaming on import change the name of the export?
+- * default export stays the same
 
 ```js
 import importedMessage from "./messages.js";
@@ -41,7 +43,9 @@ import importedMessage from "./messages.js";
 ## Exporting & Importing Multiple Variables
 
 - These import and export names do match, why is that?
+- * exported as variables - exported var. you would need to use {}
 - Could we change them to not match?
+- * named exports must be imported by same name
 
 ```js
 // messages.js
@@ -52,7 +56,9 @@ import { message, anotherMessage } from "./messages.js";
 ## Renaming Imported Modules
 
 - What are some benefits of renaming imported variables?
+- * AS keyword to assign it a var
 - What are some good conventions to follow when naming variables?
+- * descriptive, unique, camelCase, avoid reserved words, full names when possible
 
 ```js
 import {message as hello, anotherMessage} from "./messages.js";
@@ -61,7 +67,9 @@ import {message as hello, anotherMessage} from "./messages.js";
 ## Exporting a Function
 
 - What's the purpose of exporting a function?
+- * to use it in multiple places
 - How come we don't include the parameters in our export?
+- * dont want to invoke fn to export, its included with fn name
 
 ```js
 const customMessage = (message, name) => {
@@ -74,7 +82,9 @@ module.exports = { message, anotherMessage, customMessage };
 ## Importing a Function
 
 - How do we know that `customMessage` is a function?
+- * check export, console.log, check typeof (when called has args)
 - Why are we passing "Nice to see you," and "Ava" to the `customMessage` function?
+- * fn that has 2 expected params, must pass args if expecting
 
 ```js
 import {
@@ -89,6 +99,7 @@ console.log(customMessage("Nice to see you,", "Ava"));
 ## Exporting JSON
 
 - Why isn't there an export statement anywhere?
+- * data file exported by default, JSON does it for us.
 
 ```json
 [
@@ -113,7 +124,9 @@ console.log(customMessage("Nice to see you,", "Ava"));
 ## Importing JSON
 
 - What's different about importing JSON compared to other imports?
+- * assert (type:json) 
 - Do we need to `assert` the data type for JSON in the latest version of React?
+- * dont need assert for json or react (create-react-app has webpack that includes json loader)
 
 ```js
 import donuts from "./donuts.json" assert { type: "json" };
@@ -122,6 +135,7 @@ import donuts from "./donuts.json" assert { type: "json" };
 ## Create a Custom Script in `package.json`
 
 - What benefits can you see from creating your own scripts?
+- * error handling, increase productivity, improve effeciency, maintain consistenct and manageable project environment
 
 ```json
 // package.json
