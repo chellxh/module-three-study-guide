@@ -43,7 +43,7 @@ function handleSelectChange(event) {
 }
 
 // JSX
-<select onChange={handleSelectChange}>
+<select value={selectOption} onChange={handleSelectChange}>
   <option value=""></option>
   <option value="cats">Cats!</option>
   <option value="dogs">Dogs!</option>
