@@ -113,3 +113,27 @@ git push origin add-product-feature
 git pull origin main
 git pull
 ```
+
+## Deleting Branches
+
+- How would you delete a local branch called `add-product-feature`?
+- How would you delete a remote branch called `add-product-feature`?
+- What is the purpose of deleting branches?
+- Can you delete a branch that you're currently on?
+- Does deleting a branch remove it permanently?
+
+```bash
+# Delete Local Branch
+git branch -d <branch-name>
+git branch --delete <branch-name>
+
+# Delete Remote Branch
+git push origin --delete <branch-name>
+```
+
+### __CHALLENGE__: Figure out what this code is shorthand for.
+
+```bash
+git push origin :add-product-feature
+```
+
